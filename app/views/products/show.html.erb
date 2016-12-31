@@ -10,5 +10,41 @@
   <%= @product.description %>
 </p>
 
+<p>
+  <strong>Original Photo:</strong>
+  <%= url1 = @product.photo.url %>
+</p>
+
+<p>
+  <img src=<%= url1 %> >
+</p>
+
+<p>
+  <strong>Medium Photo:</strong>
+  <%= url2 = @product.photo.url(:medium) %>
+</p>
+
+<p>
+  <img src=<%= url2 %> >
+</p>
+
+<p>
+  <strong>Thumbnail:</strong>
+  <%= url3 = @product.photo.url(:thumb) %>
+</p>
+
+<p>
+  <img src=<%= url3 %> >
+</p>
+
+<p>
+  <strong>Custom Thumbnail:</strong>
+  <%= url4 = @product.photo.url(:custom_thumb, width: 90) %>
+</p>
+
+<p>
+  <img src=<%= url4 %> >
+</p>
+
 <%= link_to 'Edit', edit_product_path(@product) %> |
 <%= link_to 'Back', products_path %>
