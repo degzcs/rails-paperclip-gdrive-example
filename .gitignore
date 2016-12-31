@@ -40,9 +40,11 @@ Thumbs.db
 #Rails specific stuff
 config/database.yml
 config/env.yml
+config/secrets.yml
 config/app_config.yml
+config/client_secret.json
 spec/vcr/
-
+.env
 
 *.log
 tmp/
@@ -69,7 +71,3 @@ public/uploads
 recovery_data/
 examples.txt
 
-## config files
-config/database.yml
-config/secrets.yml
-.env

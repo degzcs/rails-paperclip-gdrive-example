@@ -14,4 +14,19 @@
 #
 
 class Product < ApplicationRecord
+  #
+  # Paperclip config
+  #
+
+  has_attached_file :photo,
+    :styles => { :medium => "300x300", :thumb => '50x50' },
+    :google_drive_options => {
+      :path => proc { |style| "#{style}_#{id}_#{photo.original_filename}" }
+    }
+
+  #
+  # Validations
+  #
+
+  validates_attachment_content_type :file, content_type: /\Aimage\/.*\z/
 end
