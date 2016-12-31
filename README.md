@@ -1,24 +1,18 @@
-# README
+# Rails Paperclip and Google Drive example
+This is an example of how to setup a Rails project to use `paperclip-google-drive` gem.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Configuration
 
-Things you may want to cover:
+1. Follow the process to get the `client_secret.json` file using the method described here() and put this in the config folder.
 
-* Ruby version
+2. Copy the example file and set the variables with the correct values:
 
-* System dependencies
+```sh
+cp .env.example .env
+```
+3. And
+```sh
+rails server
+```
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+That's all!!!
