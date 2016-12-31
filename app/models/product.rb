@@ -21,12 +21,12 @@ class Product < ApplicationRecord
   has_attached_file :photo,
     :styles => { :medium => "300x300", :thumb => '50x50' },
     :google_drive_options => {
-      :path => proc { |style| "#{style}_#{id}_#{photo.original_filename}" }
+      :path => proc { |style| "#{id}_#{photo.original_filename}_#{style}" }
     }
 
   #
   # Validations
   #
 
-  validates_attachment_content_type :file, content_type: /\Aimage\/.*\z/
+  validates_attachment_content_type :photo, content_type: /\Aimage\/.*\z/
 end
